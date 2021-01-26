@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/leftBar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txtCount"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnToast"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Toast"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toTopOf="@id/btnInc"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnInc"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Count Up"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toTopOf="@id/btnDec"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnToast" />
+
+            <Button
+                android:id="@+id/btnDec"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:text="Count Down"
+                android:textColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnInc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@color/yellow"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="100sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/leftBar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
